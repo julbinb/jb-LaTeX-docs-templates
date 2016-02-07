@@ -1,18 +1,22 @@
- \documentclass[12pt,a4paper,russian]{scrartcl}
+
+\documentclass[12pt,a4paper,russian]{scrartcl}
 % \documentclass[14pt,a4paper,russian]{scrartcl}
 %% or
 % \documentclass[12pt,a4paper,russian]{article}
 
+
 %% =================================== Fonts and Encoding
 
 \usepackage[T1,T2A]{fontenc}        %% automatically uses cm-super
-
 \usepackage[utf8]{inputenc}
 %% or
 % \usepackage[utf8x]{inputenc}
 
 \usepackage[russian,english]{babel}
-\usepackage{cmap}               %% makes PDF files gen­er­ated both search­able and copy-able
+\usepackage{cmap}           %% makes PDF files gen­er­ated both search­able and copy-able
+
+% \usepackage{paratype}       %% LaTeX support for free fonts by ParaType
+
 
 %% =================================== Layout
 
@@ -23,15 +27,85 @@
 \geometry{top=2.5cm}
 \geometry{bottom=2.5cm}
 
+
+%% =================================== References
+
+\usepackage[unicode,
+    plainpages=false, pdfpagelabels, pagebackref=false,
+    colorlinks, linkcolor=navy, urlcolor=navy, citecolor=black]
+%   colorlinks, allcolors=black]
+{hyperref}
+
+
 %% =================================== Colors
 
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{navy}{rgb}{0.1,0.1,0.5}
+
+\definecolor{darkblue}{rgb}{0.2,0.2,0.6}
+\definecolor{darkgreen}{rgb}{0.15,0.4,0.15}
+\definecolor{darkred}{rgb}{0.7,0.15,0.15}
+\definecolor{darkgray}{rgb}{0.1,0.1,0.1}
+
+\definecolor{lightgreen}{rgb}{0.85,0.95,0.9}
 
 
-%% =================================== Widely used Packages
+%% =================================== Commonly used Packages
 
-%% math formulas
+%% %%%%%%%%%%%%%%%%%%%%% Math formulas
 \usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsfonts,amssymb}
+\usepackage{amsthm,amscd}
+% \usepackage{mathtools}      %% mathematical tools to use with amsmath
+
+%% %%%%%%%%%%%%%%%%%%%%% Table
+\usepackage{tabularx}       %% tabulars with adjustable-width columns
+% \usepackage{booktabs}       %% publication quality tables in LaTeX 
+% \usepackage{multirow}       %% merge cell
+% \usepackage{tablefootnote}  %% footnotes
+
+%% %%%%%%%%%%%%%%%%%%%%% Graphics and Pictures
+\usepackage{graphicx}       %% enhanced support for graphics
+\usepackage{float}          %% improved interface for floating objects
+
+%% %%%%%%%%%%%%%%%%%%%%% Page Format
+
+\usepackage{indentfirst}    %% indent first paragraph after section header
+
+%% customising captions in floating environments
+\usepackage[justification=centering,font=small]{caption}
+
+\usepackage{relsize}        %% set the font size relative to the current font size
+\usepackage{setspace}       %% set space between lines
+
+%% %%%%%%%%%%%%%%%%%%%%% Contents
+% \usepackage{tocloft}
+
+%% %%%%%%%%%%%%%%%%%%%%% Lists
+\usepackage{enumitem}       %% control layout of itemize, enumerate, description
+
+
+%% =================================== Bibliography
+
+\usepackage{cite} 
+
+
+%% =================================== Listings
+
+% \usepackage{listings}       %% Code listings with syntax highlight
+% 
+% %% %%%%%%%%%%%%%%%%%%%%% Style
+% 
+% \lstdefinestyle{normal-lst-style}{
+%   frame=tb,
+%   basicstyle=\small\ttfamily,
+%   keywordstyle=\rmfamily\bfseries,
+%   identifierstyle=\color{darkgray},
+% }
+
+
 
 
 
