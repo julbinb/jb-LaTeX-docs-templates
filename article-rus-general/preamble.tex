@@ -1,37 +1,127 @@
- \documentclass[12pt,a4paper,russian]{scrartcl}
+
+\documentclass[12pt,a4paper,russian]{scrartcl}
 % \documentclass[14pt,a4paper,russian]{scrartcl}
 %% or
 % \documentclass[12pt,a4paper,russian]{article}
 
+
 %% =================================== Fonts and Encoding
 
+\usepackage{cmap}                   %% makes PDF files gen­er­ated both search­able and copy-able
 \usepackage[T1,T2A]{fontenc}        %% automatically uses cm-super
-
 \usepackage[utf8]{inputenc}
 %% or
 % \usepackage[utf8x]{inputenc}
-
 \usepackage[russian,english]{babel}
-\usepackage{cmap}               %% makes PDF files gen­er­ated both search­able and copy-able
 
-%% =================================== Layout
+% \usepackage{paratype}       %% LaTeX support for free fonts by ParaType
+
+
+%% =================================== Page and Layout
 
 \usepackage{geometry}
 
 \geometry{left=2.5cm}
 \geometry{right=2.5cm}
 \geometry{top=2.5cm}
-\geometry{bottom=2.5cm}
+\geometry{bottom=3cm}
+
+%% %%%%%%%%%%%%%%%%%%%%% Headings
+
+\usepackage{fancyhdr}       %% Extensive control of page headers and footers in LaTeX2ε
+
+% \pagestyle{myheadings}
+%% or
+% \pagestyle{headings}
+%% or
+\pagestyle{fancy}
+%\fancyhf{}
+\rhead{\femph{\docTitle}}
+\cfoot{\thepage}
+
+%% =================================== References
+
+\usepackage[unicode,
+    plainpages=false, pdfpagelabels, pagebackref=false,
+    colorlinks, linkcolor=navy, urlcolor=navy, citecolor=black]
+%   colorlinks, allcolors=black]
+{hyperref}
+
 
 %% =================================== Colors
 
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{navy}{rgb}{0.1,0.1,0.5}
+
+\definecolor{darkblue}{rgb}{0.2,0.2,0.6}
+\definecolor{darkgreen}{rgb}{0.15,0.4,0.15}
+\definecolor{darkred}{rgb}{0.7,0.15,0.15}
+\definecolor{darkgray}{rgb}{0.1,0.1,0.1}
+
+\definecolor{lightgreen}{rgb}{0.85,0.95,0.9}
 
 
-%% =================================== Widely used Packages
+%% =================================== Commonly used Packages
 
-%% math formulas
+%% %%%%%%%%%%%%%%%%%%%%% Math formulas
 \usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amsfonts,amssymb}
+\usepackage{amsthm,amscd}
+% \usepackage{mathtools}      %% mathematical tools to use with amsmath
+
+%% %%%%%%%%%%%%%%%%%%%%% Table
+\usepackage{tabularx}       %% tabulars with adjustable-width columns
+% \usepackage{booktabs}       %% publication quality tables in LaTeX 
+% \usepackage{multirow}       %% merge cell
+% \usepackage{tablefootnote}  %% footnotes
+
+%% %%%%%%%%%%%%%%%%%%%%% Graphics and Pictures
+\usepackage{graphicx}       %% enhanced support for graphics
+\usepackage{float}          %% improved interface for floating objects
+
+%% %%%%%%%%%%%%%%%%%%%%% Page Format
+
+\usepackage{indentfirst}    %% indent first paragraph after section header
+
+%% customising captions in floating environments
+\usepackage[justification=centering,font=small]{caption}
+
+\usepackage{relsize}        %% set the font size relative to the current font size
+\usepackage{setspace}       %% set space between lines
+
+\usepackage{titlesec}       %% select alternative section titles
+\titlelabel{\thetitle. }
+
+%% %%%%%%%%%%%%%%%%%%%%% Contents
+% \usepackage{tocloft}
+
+%% %%%%%%%%%%%%%%%%%%%%% Lists
+\usepackage{enumitem}       %% control layout of itemize, enumerate, description
 
 
+%% =================================== Bibliography
 
+\usepackage{cite} 
+
+
+%% =================================== Listings
+
+% \usepackage{listings}       %% Code listings with syntax highlight
+% 
+% %% %%%%%%%%%%%%%%%%%%%%% Style
+% 
+% \lstdefinestyle{normal-lst-style}{
+%   frame=tb,
+%   basicstyle=\small\ttfamily,
+%   keywordstyle=\rmfamily\bfseries,
+%   identifierstyle=\color{darkgray},
+% }
+
+
+%% =================================== Commands
+
+\newcommand{\femph}[1]{\textit{#1}}
+\newcommand{\fEmph}[1]{\textbf{#1}}
+\newcommand{\fname}[1]{\textsf{#1}}
