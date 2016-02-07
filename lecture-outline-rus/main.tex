@@ -1,0 +1,19 @@
+
+%% document settings
+\input{preamble.tex}
+
+%% title info
+\input{title.tex}
+
+%% bibliography file (in BibTeX)
+\addbibresource{bibliography.bib}
+
+\begin{document}
+
+  \maketitle
+
+  \input{body}
+  
+  \printbibliography[title=\docRefname]
+
+\end{document}
