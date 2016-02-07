@@ -7,26 +7,37 @@
 
 %% =================================== Fonts and Encoding
 
+\usepackage{cmap}                   %% makes PDF files gen­er­ated both search­able and copy-able
 \usepackage[T1,T2A]{fontenc}        %% automatically uses cm-super
 \usepackage[utf8]{inputenc}
 %% or
 % \usepackage[utf8x]{inputenc}
-
 \usepackage[russian,english]{babel}
-\usepackage{cmap}           %% makes PDF files gen­er­ated both search­able and copy-able
 
 % \usepackage{paratype}       %% LaTeX support for free fonts by ParaType
 
 
-%% =================================== Layout
+%% =================================== Page and Layout
 
 \usepackage{geometry}
 
 \geometry{left=2.5cm}
 \geometry{right=2.5cm}
 \geometry{top=2.5cm}
-\geometry{bottom=2.5cm}
+\geometry{bottom=3cm}
 
+%% %%%%%%%%%%%%%%%%%%%%% Headings
+
+\usepackage{fancyhdr}       %% Extensive control of page headers and footers in LaTeX2ε
+
+% \pagestyle{myheadings}
+%% or
+% \pagestyle{headings}
+%% or
+\pagestyle{fancy}
+%\fancyhf{}
+\rhead{\femph{\docTitle}}
+\cfoot{\thepage}
 
 %% =================================== References
 
@@ -80,6 +91,9 @@
 \usepackage{relsize}        %% set the font size relative to the current font size
 \usepackage{setspace}       %% set space between lines
 
+\usepackage{titlesec}       %% select alternative section titles
+\titlelabel{\thetitle. }
+
 %% %%%%%%%%%%%%%%%%%%%%% Contents
 % \usepackage{tocloft}
 
@@ -106,6 +120,8 @@
 % }
 
 
+%% =================================== Commands
 
-
-
+\newcommand{\femph}[1]{\textit{#1}}
+\newcommand{\fEmph}[1]{\textbf{#1}}
+\newcommand{\fname}[1]{\textsf{#1}}
