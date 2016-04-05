@@ -71,6 +71,7 @@
 \definecolor{darkgray}{rgb}{0.1,0.1,0.1}
 
 \definecolor{lightgreen}{rgb}{0.85,0.95,0.9}
+\definecolor{lightgray}{rgb}{0.9,0.9,0.9}
 
 
 %% =================================== Commonly used Packages
@@ -79,6 +80,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts,amssymb}
 \usepackage{amsthm,amscd}
+\usepackage{stmaryrd}
 % \usepackage{mathtools}      %% mathematical tools to use with amsmath
 
 %% %%%%%%%%%%%%%%%%%%%%% Table
@@ -91,9 +93,15 @@
 \usepackage{graphicx}       %% enhanced support for graphics
 \usepackage{float}          %% improved interface for floating objects
 
+%\usepackage[framemethod=tikz]{mdframed}	%% framed environments that can split at page boundaries
+%\usepackage{framed}
+
 %% %%%%%%%%%%%%%%%%%%%%% Page Format
 
 \usepackage{indentfirst}    %% indent first paragraph after section header
+
+%\setlength{\parindent}{0.85cm} %% paragraph identation
+%\setlength{\parskip}{0.1cm}    %% vertical space between paragraphs
 
 %% customising captions in floating environments
 \usepackage[justification=centering,font=small]{caption}
@@ -139,3 +147,7 @@
 \newcommand{\femph}[1]{\textit{#1}}
 \newcommand{\fEmph}[1]{\textbf{#1}}
 \newcommand{\fname}[1]{\textsf{#1}}
+\newcommand{\fcode}[1]{{\small\texttt{#1}}}
+
+
+
